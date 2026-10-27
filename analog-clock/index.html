@@ -8,5 +8,43 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
-  <body>Analog clock</body>
+  <body class="min-h-screen bg-[#190b10] text-[#fff5ee] flex items-center justify-center p-4">
+    <main class="w-full max-w-[720px] flex flex-col items-center gap-6">
+      <!-- 1. DEED GARCHIG -->
+      <p id="deed-garchig" class="text-[10px] tracking-[3px] text-[#C4A2AB]">— LET’S GET YOU STARTED —</p>
+      <!-- 2. card -->
+      <section id="card" class="w-full rounded-3xl border border-white/10 bg-[#260f17] overflow-hidden">
+        <div class="px-12 pt-10">
+          <!-- 2a. card-n tolgoi -->
+          <div class="flex justify-between text-[10px] tracking-[1.5px]">
+            <span id="tuluv-shash" class="text-[#FF9299]">GETTING READY</span>
+            <span id="shatnii-dugaar" class="text-[#C4A2AB]">01 — 03</span>
+          </div>
+          <!-- 2b. Gol garchig + tailbar -->
+          <h1 id="gol-garchig" class="mt-6 text-3xl sm:text-5xl font-semibold">Something good is coming.</h1>
+          <p id="dood-garchig" class="mt-2 text-sm text-[#c4a2ab]">A little preparation for a great beginning.</p>
+          <!-- 2c. Khuvi + tuluv, tailbar -->
+          <div class="mt-8 flex items-end justify-between">
+            <div class="flex items-baseline">
+              <span id="huvi-toonii-utga" class="sm:text-8xl leading-none text-7xl font-medium leading-none">64</span>
+              <span class="ml-2 text-3xl text-[#FF6470]">%</span>
+            </div>
+            <span id="tuluv-tailbar" class="text-sm text-[#dfbac4]">Bringing everything together</span>
+          </div>
+          <!-- 2d progress bar -->
+          <div id="achaalal" class="mt-6 h-3 rounded full bg-white/5 overflow-hidden">
+            <div></div>
+            <div id="guilgeh" class="j-full w-0 rounded-full bg-[#f04452] transition all duration-100"></div>
+          </div>
+          <!-- 2e. Progress bar-yn dood text -->
+          <div class="mt-3 flex justify-between text-[10px] tracking-[1px] text-[#b9939d]">
+            <span>PREPARING YOUR EXPERIENCE</span>
+            <span>JUST A MOMENT</span>
+          </div>
+        </div>
+        <!-- 2f. Doodkh sanamj -->
+        <p id="sanamj" class="h-14 bg-[#1E0C13] mt-6 flex items-center justify-center text-center text-[#c4a2ab]">→ Your welcome page will open automatically.</p>
+      </section>
+    </main>
+  </body>
 </html>
