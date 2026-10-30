@@ -5,9 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    Stopwatch
+  <body class="min-h-screen min-w-[1000px] bg-[#101714] font-sans text-[#f0fdf4]">
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#c5d9bd]/10">
+        <nav>
+          <a href="../index.html" class="inline-flex items-center gap-2 rounded-full border border-[#c5d9bd]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#c5d9bd] transition-colors hover:border-[#c5d9bd]/35 hover:bg-[#c5d9bd]/10 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] motion-reduce:transition-none">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#c5d9bd]/65">The everyday collection / 04</span>
+      </header>
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <!-- Endees ehel -->
+        <main class="w-full max-w-[520px] rounded-[28px] border border-white/15 bg-[#19231e]/55 p-8 sm:p-10">
+          <header class="flex items-start justify-between">
+            <div class="flex size-10 items-center justify-center rounded-xl bg-[#19231E8C]/10 text-[#c5d9bd]">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="14" r="8" />
+                <path d="M12 10v4l2 2M9 2h6" />
+              </svg>
+            </div>
+            <p id="status" class="rounded-full border border-[#c5d9bd]/15 bg-[#b5cbb2]/5 px-3 py-1 text-xs font-medium text-[#c5d9bd]">Ready</p>
+          </header>
+          <div class="mt-8 border-y border-[#b5cbb2]/15 py-8">
+            <div class="grid grid-cols-[1fr_16px_1fr_16px_1fr] items-start">
+              <div class="flex flex-col items-center gap-3">
+                <span id="hours" class="font-mono text-5xl font-light leading-none tabular-nums text-[#edf3e8]">00</span>
+                <span class="text-[10px] font-medium tracking-[2px] text-[#9bad9e]">HOURS</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 pt-4" aria-hidden="true">
+                <span class="size-1 rounded-full bg-[#5c7161]"></span>
+                <span class="size-1 rounded-full bg-[#5c7161]"></span>
+              </div>
+
+              <div class="flex flex-col items-center gap-3">
+                <span id="minutes" class="font-mono text-5xl font-light leading-none tabular-nums text-[#edf3e8]">00</span>
+                <span class="text-[10px] font-medium tracking-[2px] text-[#9bad9e]">MINUTES</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 pt-4" aria-hidden="true">
+                <span class="size-1 rounded-full bg-[#5c7161]"></span>
+                <span class="size-1 rounded-full bg-[#5c7161]"></span>
+              </div>
+
+              <div class="flex flex-col items-center gap-3">
+                <span id="seconds" class="font-mono text-5xl font-light leading-none tabular-nums text-[#c5d9bd]">00</span>
+                <span class="text-[10px] font-medium tracking-[2px] text-[#9bad9e]">SECONDS</span>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
   </body>
 </html>

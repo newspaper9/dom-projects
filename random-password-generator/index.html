@@ -5,9 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password generator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    Random password generator
+  <body class="antialiased min-h-screen min-w-[1000px] bg-[#101b16] font-sans text-[#f0fdf4]">
+    <div class="mx-auto flex w-[920px] flex-col min-h-screen">
+      <header class="items-center justify-between flex shrink-0 h-24 border-b border-[#86efac]/10">
+        <nav aria-label="Project navigation" data-project-navigation>
+          <a href="../index.html" class="inline-flex items-center gap-2 rounded-full border border-[#86efac]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#86efac] transition-colors hover:bg-[#86efac]/10 hover:border-[#86efac]/35 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#86efac] motion-reduce:transition-none">
+            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#86efac]/65">The everyday collection / 02</span>
+      </header>
+
+      <div class="flex flex-1 items-center justify-center py-10 520]px">
+        <main class="w-[520px] rounded-3xl border border-white/10 bg-[#192b22] p-9 shadow-2xl">
+          <div class="mb-6 flex size-11 items-center justify-center rounded-xl bg-[#4ade80]/15 text-[#86efac]">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <rect x="5" y="10" width="14" height="11" rx="3" />
+              <path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2" />
+            </svg>
+          </div>
+
+          <h1 class="text-[28px] font-semibold tracking-tight">Password generator</h1>
+          <p class="mt-2 text-sm text-[#a4b9ad]">A strong password. One click away.</p>
+
+          <label for="password-field" class="mt-8 block text-xs text-[#a4b9ad]">Your password</label>
+          <div class="mt-3 flex items-center gap-3 rounded-xl border border-white/10 bg-[#101b16] p-3 pl-4">
+            <input id="password-field" type="text" readonly spellcheck="false" autocomplete="off" class="flex-1 bg-transparent py-2 font-mono text-lg text-[#bbf7d0] outline-none" />
+            <button id="copy-btn" type="button" class="cursor-pointer rounded-lg bg-white/5 px-3 py-2 text-xs font-medium text-[#dcece2] hover:bg-white/10">Copy</button>
+          </div>
+          <p id="status-text" class="mt-3 min-h-5 text-xs text-[#a4b9ad]">Uses letters, numbers, and symbols.</p>
+
+          <div class="mt-6 flex items-center justify-between">
+            <label for="length-slider" class="text-sm text-[#dcece2]">Password length</label>
+            <output id="length-value" for="length-slider" class="font-mono text-lg text-[#86efac]">16</output>
+          </div>
+
+          <input id="length-slider" type="range" min="8" max="24" value="16" class="mt-4 w-full cursor-pointer accent-[#4ade80]" />
+          <div class="mt-1 flex justify-between text-xs text-[#8aa294]"><span>8</span><span>24</span></div>
+
+          <button id="generate-btn" type="button" class="mt-7 h-12 w-full cursor-pointer rounded-xl bg-[#4ade80] text-sm font-semibold text-[#102418] transition-colors hover:bg-[#86efac]">Generate password</button>
+          <p class="mt-5 text-center text-xs text-[#8aa294]">Generated in your browser. Never saved.</p>
+        </main>
+      </div>
+    </div>
   </body>
 </html>

@@ -5,9 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loading · Forma</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
+  <body class="text-[#fff5ee] bg-[#190b10] min-w-[1000px] antialiased font-sans min-h-screen">
+    <div class="w-[1040px] flex-col flex mx-auto min-h-screen">
+      <header class="h-28 border-b border-[#ff9299]/10 items-center justify-between flex shrink-0 px-2">
+        <nav aria-label="Project navigation" data-project-navigation>
+          <a href="../index.html" class="text-xs font-medium text-[#ff9299] bg-white/5 border border-[#ff9299]/15 px-4.5 py-2.5 rounded-full inline-flex items-center gap-2 transition-colors hover:bg-[#ff9299]/10 hover:border-[#ff9299]/35 hover:text-[#fff5ee] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff9299] motion-reduce:transition-none">
+            <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="1.7" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="15" width="15" aria-hidden="true">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[11px] font-medium uppercase tracking-[2.5px] text-[#ff9299]/65">The everyday collection / 01</span>
+      </header>
 
-  <body>
-    Loading bar
+      <div class="py-12 flex flex-1 items-center justify-center">
+        <main class="flex flex-col items-center justify-center">
+          <div class="text-[11px] font-medium tracking-[3px] text-[#dfabb5] items-center gap-3 flex mb-8"><span class="w-10 h-px bg-[#af5266]"></span>LET’S GET YOU STARTED<span class="w-10 h-px bg-[#af5266]"></span></div>
+
+          <section class="bg-[#260f17] border border-[#ffffff14] w-[840px] overflow-hidden rounded-[28px]">
+            <div class="pt-12 px-14">
+              <div class="justify-between items-center flex">
+                <span class="bg-[#ef3340]/10 border border-[#ff6470]/25 text-[#ff9299] px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-[1.5px]">GETTING READY </span>
+                <span class="font-mono text-xs text-[#bc939e]">01 — 03</span>
+              </div>
+
+              <h1 id="page-title" class="font-semibold tracking-[-1.8px] leading-tight text-[46px] mt-8">Something good is coming<span class="text-[#ff4b59]">.</span></h1>
+
+              <p class="text-[16px] leading-6 text-[#c4a2ab] mt-3">A little preparation for a great beginning.</p>
+
+              <div class="justify-between items-end flex mt-10">
+                <div class="tabular-nums flex items-baseline">
+                  <span id="counter" class="text-[124px] font-medium leading-none tracking-[-7px]">0</span>
+                  <span class="text-[40px] font-light text-[#ff6470] ml-2">%</span>
+                </div>
+                <span id="loading-status" class="text-base text-[#dfbac4] mb-4">Preparing your space</span>
+              </div>
+
+              <div id="loading-progress" class="bg-[#ffffff0d] h-4 rounded-full overflow-hidden mt-8">
+                <div id="loading-bar" class="w-0 h-full bg-[#f04452] shadow-[0_0_24px_#ef334060] rounded-full"></div>
+              </div>
+
+              <div class="font-mono text-[11px] tracking-[1px] text-[#b9939d] justify-between flex my-4"><span>PREPARING YOUR EXPERIENCE</span><span>JUST A MOMENT</span></div>
+            </div>
+
+            <div class="bg-[#1e0c13] border-t border-[#ffffff0a] text-sm text-[#c4a2ab] px-8 py-6 justify-center items-center gap-2 flex">
+              <svg stroke-width="1.5" stroke="#ff6470" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+              >Your welcome page will open automatically.
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
   </body>
 </html>
