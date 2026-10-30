@@ -7,61 +7,56 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="index.js" defer></script>
   </head>
-
-  <body class="min-h-screen min-w-[1000px] bg-[#101714] font-sans text-[#f0fdf4]">
-    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
-      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#c5d9bd]/10">
-        <nav>
-          <a href="../index.html" class="inline-flex items-center gap-2 rounded-full border border-[#c5d9bd]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#c5d9bd] transition-colors hover:border-[#c5d9bd]/35 hover:bg-[#c5d9bd]/10 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] motion-reduce:transition-none">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+  <body class="bg-[#101714] min-h-screen text-[#f0fdf4] antialiased min-w-[1000px] font-sans">
+    <div class="flex flex-col min-h-screen w-[920px] mx-auto">
+      <header class="border-b border-[#c5d9bd]/10 h-24 items-center shrink-0 justify-between flex">
+        <nav data-project-navigation aria-label="Project navigation">
+          <a href="../index.html" class="text-xs border border-[#c5d9bd]/15 text-[#c5d9bd] bg-white/5 px-4 py-2.5 rounded-full inline-flex items-center gap-2 font-medium transition-colors hover:bg-[#c5d9bd]/10 hover:border-[#c5d9bd]/35 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] motion-reduce:transition-none">
+            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 12H5m7-7-7 7 7 7" />
             </svg>
             Back to projects
           </a>
         </nav>
-        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#c5d9bd]/65">The everyday collection / 04</span>
+        <span class="text-[10px] font-medium text-[#c5d9bd]/65 tracking-[2.5px] uppercase">The everyday collection / 04</span>
       </header>
-
-      <div class="flex flex-1 items-center justify-center py-10">
-        <!-- Endees ehel -->
-        <main class="w-full max-w-[520px] rounded-[28px] border border-white/15 bg-[#19231e]/55 p-8 sm:p-10">
-          <header class="flex items-start justify-between">
-            <div class="flex size-10 items-center justify-center rounded-xl bg-[#19231E8C]/10 text-[#c5d9bd]">
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <div class="py-10 flex flex-1 items-center justify-center">
+        <main class="border border-white/15 bg-[#19231e]/55 w-[620px] rounded-[28px] p-10">
+          <header class="justify-between items-start flex">
+            <div class="size-11 rounded-xl bg-[#b5cbb2]/10 text-[#c5d9bd] items-center justify-center flex">
+              <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="14" r="8" />
-                <path d="M12 10v4l2 2M9 2h6" />
+                <path d="M12 10v4l2 2M9 2h6m-3 0v4m6 1 2-2" />
               </svg>
             </div>
-            <p id="status" class="rounded-full border border-[#c5d9bd]/15 bg-[#b5cbb2]/5 px-3 py-1 text-xs font-medium text-[#c5d9bd]">Ready</p>
+            <p id="status" class="text-xs border border-[#c5d9bd]/15 bg-[#b5cbb2]/5 text-[#c5d9bd] px-3 py-1.5 rounded-full font-medium">Ready</p>
           </header>
-          <div class="mt-8 border-y border-[#b5cbb2]/15 py-8">
-            <div class="grid grid-cols-[1fr_16px_1fr_16px_1fr] items-start">
-              <div class="flex flex-col items-center gap-3">
-                <span id="hours" class="font-mono text-5xl font-light leading-none tabular-nums text-[#edf3e8]">00</span>
-                <span class="text-[10px] font-medium tracking-[2px] text-[#9bad9e]">HOURS</span>
+          <h1 class="tracking-[-1px] text-[40px] mt-7">Stopwatch</h1>
+          <p class="text-[#a4b9ad] text-sm mt-2">Make time for what matters.</p>
+          <div class="border-y border-[#b5cbb2]/15 py-9 mt-9">
+            <div id="timer" class="grid-cols-[1fr_20px_1fr_20px_1fr] items-start grid">
+              <div class="flex-col items-center gap-4 flex">
+                <span id="hours" class="text-[56px] font-mono font-light leading-none tracking-[-2px] tabular-nums text-[#edf3e8]">00</span>
+                <span class="text-[9px] font-medium text-[#9bad9e] tracking-[2px]">HOURS</span>
               </div>
-
-              <div class="flex flex-col items-center gap-2 pt-4" aria-hidden="true">
-                <span class="size-1 rounded-full bg-[#5c7161]"></span>
-                <span class="size-1 rounded-full bg-[#5c7161]"></span>
+              <span class="text-center font-mono text-[40px] leading-[56px] text-[#5c7161]">:</span>
+              <div class="flex-col items-center gap-4 flex">
+                <span id="minutes" class="font-light text-[56px] font-mono leading-none tracking-[-2px] tabular-nums text-[#edf3e8]">00</span>
+                <span class="tracking-[2px] text-[9px] font-medium text-[#9bad9e]">MINUTES</span>
               </div>
-
-              <div class="flex flex-col items-center gap-3">
-                <span id="minutes" class="font-mono text-5xl font-light leading-none tabular-nums text-[#edf3e8]">00</span>
-                <span class="text-[10px] font-medium tracking-[2px] text-[#9bad9e]">MINUTES</span>
-              </div>
-
-              <div class="flex flex-col items-center gap-2 pt-4" aria-hidden="true">
-                <span class="size-1 rounded-full bg-[#5c7161]"></span>
-                <span class="size-1 rounded-full bg-[#5c7161]"></span>
-              </div>
-
-              <div class="flex flex-col items-center gap-3">
-                <span id="seconds" class="font-mono text-5xl font-light leading-none tabular-nums text-[#c5d9bd]">00</span>
-                <span class="text-[10px] font-medium tracking-[2px] text-[#9bad9e]">SECONDS</span>
+              <span class="text-center font-mono text-[40px] leading-[56px] text-[#5c7161]">:</span>
+              <div class="flex-col gap-4 items-center flex">
+                <span id="seconds" class="tabular-nums text-[56px] font-mono font-light leading-none tracking-[-2px] text-[#c5d9bd]">00</span>
+                <span class="text-[9px] font-medium text-[#9bad9e] tracking-[2px]">SECONDS</span>
               </div>
             </div>
           </div>
+          <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 mt-8">
+            <button id="start" type="button" class="cursor-pointer rounded-xl bg-[#b5cbb2] text-sm text-[#102418] font-semibold h-12 transition-colors enabled:hover:bg-[#c5d9bd] disabled:cursor-not-allowed disabled:opacity-35">Start</button>
+            <button id="stop" type="button" disabled class="text-sm border border-white/10 bg-white/5 text-[#dcece2] font-medium rounded-xl h-12 cursor-pointer transition-colors enabled:hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] disabled:cursor-not-allowed disabled:opacity-35">Pause</button>
+            <button id="reset" type="button" disabled class="border border-white/10 text-sm font-medium text-[#a4b9ad] rounded-xl h-12 cursor-pointer transition-colors enabled:hover:bg-white/5 enabled:hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] disabled:cursor-not-allowed disabled:opacity-35">Reset</button>
+          </div>
+          <p class="text-center text-xs text-[#8aa294] mt-5">A moment of focus. At your own pace.</p>
         </main>
       </div>
     </div>
