@@ -30,9 +30,15 @@ const generatePasswordFromRange = () => {
 
 generatePasswordButton.addEventListener("click", generatePassword);
 passwordLengthRangeInput.addEventListener("input", generatePasswordFromRange);
-copyGeneratedPassword.addEventListener("click", async () => {
-  await navigator.clipboard.writeText(showGeneratedPassword.value);
+copyGeneratedPassword.addEventListener("click", () => {
+  navigator.clipboard.writeText(showGeneratedPassword.value);
   message.textContent = "Copied to clipboard.";
+  copyGeneratedPassword.textContent = "Copied";
+
+  setTimeout(() => {
+    message.textContent = "Uses letters, numbers, and symbols.";
+    copyGeneratedPassword.textContent = "Copy";
+  }, 2000);
 });
 
 generatePassword();
