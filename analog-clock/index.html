@@ -1,84 +1,53 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f5f3ee" />
-    <title>Analog Clock · A moment in time</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="index.js" defer></script>
-  </head>
-  <body class="min-h-screen bg-[#f5f3ee] text-[#253b35] font-sans antialiased min-w-[1000px] relative isolate selection:bg-[#dbe4d6]">
-    <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_50%_45%,#ffffff_0%,#f5f3ee_65%)] pointer-events-none -z-10" aria-hidden="true"></div>
-    <div class="mx-auto flex w-[920px] flex-col min-h-screen">
-      <header class="h-24 border-b border-[#253b35]/10 shrink-0 flex items-center justify-between">
-        <nav aria-label="Project navigation" data-project-navigation>
-          <a
-            href="../index.html"
-            class="bg-white/60 hover:bg-white text-[#52675c] hover:text-[#253b35] border border-[#253b35]/10 hover:border-[#253b35]/25 focus-visible:outline-[#52675c] focus-visible:outline-offset-4 focus-visible:outline-2 inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-medium transition-colors"
-          >
-            <svg
-              aria-hidden="true"
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M19 12H5m7-7-7 7 7 7" />
-            </svg>
-            Back to projects
-          </a>
-        </nav>
-        <span class="text-[10px] tracking-[2.5px] text-[#748174] font-medium uppercase">The everyday collection / 05</span>
-      </header>
-      <main class="flex-1 flex flex-col items-center justify-center py-10">
-        <p class="mb-3 text-[9px] tracking-[3px] text-[#7b887c] font-semibold uppercase flex items-center gap-3">
-          <span class="h-px w-7 bg-[#a8b29e]" aria-hidden="true"></span>A moment in time<span class="h-px w-7 bg-[#a8b29e]" aria-hidden="true"></span>
-        </p>
-        <h1 class="font-serif text-[40px] tracking-[-1px] leading-tight">A quieter way to keep time.</h1>
-        <p class="mt-3 mb-9 text-sm text-[#748174]">Slow down. Let the seconds find their rhythm.</p>
-        <div
-          class="bg-gradient-to-br from-[#faf9f5] via-[#e5e3da] to-[#d7d9cf] shadow-[0_30px_55px_-20px_#344a3840,inset_0_2px_3px_#ffffff] border border-white/80 p-4 rounded-full relative"
-        >
-          <div
-            id="clock"
-            class="bg-[#fcfbf7] border border-[#d8dbd1] shadow-[inset_0_3px_12px_#253b3510,0_0_0_1px_#ffffff80] w-[360px] aspect-square rounded-full relative"
-          >
-            <div id="markers" class="absolute inset-0" ></div>
-            <div id="numbers" class="absolute inset-0 font-serif text-xl sm:text-2xl"></div>
- 
-            <p class="absolute left-1/2 top-[28%] -translate-x-1/2 text-[9px] font-semibold uppercase tracking-[3px] text-[#8f998a]">Swiss</p>
- 
-            <div
-              id="hour-hand"
-              class="absolute bottom-1/2 left-1/2 z-10 w-[7px] h-[27%] bg-[#253b35] shadow-[1px_3px_3px_#253b3520] -translate-x-1/2 origin-bottom rounded-full"
-            ></div>
-            <div
-              id="minute-hand"
-              class="absolute bottom-1/2 left-1/2 z-20 w-[4px] h-[34%] bg-[#253b35] shadow-[1px_3px_3px_#253b3520] -translate-x-1/2 origin-bottom rounded-full"
-            ></div>
-            <div id="second-hand" class="absolute bottom-1/2 left-1/2 z-30 w-[2px] h-[39%] bg-[#c47e57] -translate-x-1/2 origin-bottom rounded-full">
-              <span class="absolute top-full w-full h-6 bg-[#c47e57]"></span>
-            </div>
-            <div class="absolute left-1/2 top-1/2 z-40 size-3 bg-[#c47e57] ring-4 ring-[#fcfbf7] -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
-          </div>
-        </div>
-        <div
-          class="bg-white/50 border border-[#253b35]/10 mt-8 px-4 py-2 text-[10px] tracking-[1px] text-[#657666] font-medium rounded-full flex items-center gap-2"
-        >
-          <span class="size-1.5 bg-[#7e9475] rounded-full" aria-hidden="true"></span>
-          YOUR LOCAL TIME
-        </div>
-        <noscript><p class="mt-4 text-sm text-[#657666]">Enable JavaScript to display the current time.</p></noscript>
-      </main>
-      <footer class="h-16 border-t border-[#253b35]/10 text-[10px] text-[#748174] shrink-0 flex items-center justify-between">
-        <span>Every second, thoughtfully measured.</span><span class="font-mono tracking-[2px]">ANALOG / LIVE</span>
-      </footer>
-    </div>
-  </body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f3ee" />
+    <title>Analog Clock · A moment in time</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body class="min-h-screen bg-[#f5f3ee] text-[#253b35] font-sans antialiased min-w-[1000px] relative isolate selection:bg-[#dbe4d6]">
+    <div class="fixed inset-0 bg-[radial-gradient(ellipse_at_50%_45%,#ffffff_0%,#f5f3ee_65%)] pointer-events-none -z-10" aria-hidden="true"></div>
+    <div class="mx-auto flex w-[920px] flex-col min-h-screen">
+      <header class="h-24 border-b border-[#253b35]/10 shrink-0 flex items-center justify-between">
+        <nav aria-label="Project navigation" data-project-navigation>
+          <a href="../index.html" class="bg-white/60 hover:bg-white text-[#52675c] hover:text-[#253b35] border border-[#253b35]/10 hover:border-[#253b35]/25 focus-visible:outline-[#52675c] focus-visible:outline-offset-4 focus-visible:outline-2 inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-medium transition-colors">
+            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] tracking-[2.5px] text-[#748174] font-medium uppercase">The everyday collection / 05</span>
+      </header>
+      <main class="flex-1 flex flex-col items-center justify-center py-10">
+        <p class="mb-3 text-[9px] tracking-[3px] text-[#7b887c] font-semibold uppercase flex items-center gap-3"><span class="h-px w-7 bg-[#a8b29e]" aria-hidden="true"></span>A moment in time<span class="h-px w-7 bg-[#a8b29e]" aria-hidden="true"></span></p>
+        <h1 class="font-serif text-[40px] tracking-[-1px] leading-tight">A quieter way to keep time.</h1>
+        <p class="mt-3 mb-9 text-sm text-[#748174]">Slow down. Let the seconds find their rhythm.</p>
+        <div class="bg-gradient-to-br from-[#faf9f5] via-[#e5e3da] to-[#d7d9cf] shadow-[0_30px_55px_-20px_#344a3840,inset_0_2px_3px_#ffffff] border border-white/80 p-4 rounded-full relative">
+          <div id="clock" class="bg-[#fcfbf7] border border-[#d8dbd1] shadow-[inset_0_3px_12px_#253b3510,0_0_0_1px_#ffffff80] w-[360px] aspect-square rounded-full relative">
+            <div id="markers" class="absolute inset-0"></div>
+            <div id="numbers" class="absolute inset-0 font-serif text-xl sm:text-2xl"></div>
 
+            <p class="absolute left-1/2 top-[28%] -translate-x-1/2 text-[9px] font-semibold uppercase tracking-[3px] text-[#8f998a]">Swiss</p>
+
+            <div id="hour-hand" class="absolute bottom-1/2 left-1/2 z-10 w-[7px] h-[27%] bg-[#253b35] shadow-[1px_3px_3px_#253b3520] -translate-x-1/2 origin-bottom rounded-full"></div>
+            <div id="minute-hand" class="absolute bottom-1/2 left-1/2 z-20 w-[4px] h-[34%] bg-[#253b35] shadow-[1px_3px_3px_#253b3520] -translate-x-1/2 origin-bottom rounded-full"></div>
+            <div id="second-hand" class="absolute bottom-1/2 left-1/2 z-30 w-[2px] h-[39%] bg-[#c47e57] -translate-x-1/2 origin-bottom rounded-full">
+              <span class="absolute top-full w-full h-6 bg-[#c47e57]"></span>
+            </div>
+            <div class="absolute left-1/2 top-1/2 z-40 size-3 bg-[#c47e57] ring-4 ring-[#fcfbf7] -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
+          </div>
+        </div>
+        <div class="bg-white/50 border border-[#253b35]/10 mt-8 px-4 py-2 text-[10px] tracking-[1px] text-[#657666] font-medium rounded-full flex items-center gap-2">
+          <span class="size-1.5 bg-[#7e9475] rounded-full" aria-hidden="true"></span>
+          YOUR LOCAL TIME
+        </div>
+        <noscript><p class="mt-4 text-sm text-[#657666]">Enable JavaScript to display the current time.</p></noscript>
+      </main>
+      <footer class="h-16 border-t border-[#253b35]/10 text-[10px] text-[#748174] shrink-0 flex items-center justify-between"><span>Every second, thoughtfully measured.</span><span class="font-mono tracking-[2px]">ANALOG / LIVE</span></footer>
+    </div>
+  </body>
+</html>
