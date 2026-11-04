@@ -8,22 +8,35 @@
     <script src="index.js" defer></script>
   </head>
 
-  <body class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]">
-    <div class="mx-auto flex min-h-screen w-[1240px] flex-col">
-      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#d9f99d]/10">
+  <body class="text-[#f4f4f5] min-w-[1000px] bg-[#09090b] min-h-screen font-sans">
+    <div class="flex flex-col min-h-screen w-[1240px] mx-auto">
+      <header class="border-b border-[#d9f99d]/10 items-center justify-between shrink-0 h-24 flex">
+        <span class="tracking-[2.5px] text-[10px] uppercase font-medium text-[#d9f99d]/65">The everyday collection / 03</span>
         <nav>
-          <a href="../index.html" class="inline-flex items-center gap-2 rounded-full border border-[#d9f99d]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#d9f99d] transition-colors hover:border-[#d9f99d]/35 hover:bg-[#d9f99d]/10 hover:text-[#f4f4f5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9f99d] motion-reduce:transition-none">
+          <a href="../index.html" class="hover:bg-[#d9f99d]/10 hover:text-[#f4f4f5] focus-visible:outline-[#d9f99d] motion-reduce:transition-none inline-flex items-center gap-2 rounded-full border border-[#d9f99d]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#d9f99d] transition-colors hover:border-[#d9f99d]/35 focus-visible:outline-2 focus-visible:outline-offset-4">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 12H5m7-7-7 7 7 7" />
             </svg>
             Back to projects
           </a>
         </nav>
-        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65">The everyday collection / 03</span>
       </header>
 
-      <div class="flex flex-1 items-center justify-center py-10">
-        <!-- Endees ehel -->
+      <div class="flex-1 flex flex-col py-10">
+        <div class="mt-[40px] flex items-start justify-between w-[1240px] h-[104px]">
+          <div class="w-[620px] h-[65px]">
+            <div class="text-[#F4F4F5] text-3xl">Color palettes.</div>
+            <div class="mt-[12px] text-sm text-[#A1A1AA]">Generated shades with Tailwind color names. Click a shade to copy its HEX background color.</div>
+          </div>
+          <button id="shuffle-colors" class="text-[#09090B] bg-[#D9F99D] flex h-[48px] w-[186px] items-center justify-center rounded-xl text-sm">Shuffle palettes></button>
+        </div>
+        <div class="bg-white/10 h-px w-full"></div>
+        <div class="flex w-[1240px] justify-between h-[55px]">
+          <div class="text-xs text-[#A1A1AA] mt-[20px]">100 → 950 · LIGHT TO DARK</div>
+          <div id="status" class="text-xs text-[#A1A1AA] mt-[20px]">Ready to explore.</div>
+        </div>
+
+        <div id="colors" class="space-y-7"></div>
       </div>
     </div>
   </body>
