@@ -22,7 +22,30 @@
       </header>
 
       <div class="flex flex-1 items-center justify-center py-10">
-        <!-- Endees ehel -->
+        <main class="w-full max-w-xl rounded-3xl border border-zinc-800 bg-zinc-900 p-6 shadow-2xl sm:p-8">
+          <h1 class="text-2xl font-semibold tracking-tight">Reaction time</h1>
+          <p class="mt-2 text-sm leading-6 text-zinc-400">Wait for green, then click as quickly as you can.</p>
+
+          <button id="target" type="button" class="my-6 flex min-h-64 w-full cursor-pointer flex-col items-center justify-center gap-3 rounded-2xl bg-zinc-800 px-5 py-10 text-center text-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lime-200" aria-describedby="instructions">
+            <span id="symbol" class="text-5xl" aria-hidden="true">◎</span>
+            <span id="message" class="text-2xl font-semibold">Ready when you are</span>
+            <span id="hint" class="text-sm">Click to start</span>
+          </button>
+
+          <div class="grid grid-cols-2 gap-3 text-center">
+            <div class="rounded-xl bg-zinc-800 p-4">
+              <p id="last" class="text-2xl tabular-nums text-lime-200">—</p>
+              <p class="mt-1 text-xs text-zinc-400">Last attempt</p>
+            </div>
+            <div class="rounded-xl bg-zinc-800 p-4">
+              <p id="best" class="text-2xl tabular-nums text-lime-200">—</p>
+              <p class="mt-1 text-xs text-zinc-400">Best this session</p>
+            </div>
+          </div>
+
+          <p id="instructions" class="mt-5 text-center text-xs leading-5 text-zinc-400">Click the panel, or focus it and press Space or Enter. Clicking before green ends the attempt.</p>
+          <p id="status" role="status" class="sr-only">Ready to start.</p>
+        </main>
       </div>
     </div>
   </body>
